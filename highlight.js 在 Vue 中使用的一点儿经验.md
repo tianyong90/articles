@@ -38,7 +38,7 @@ export default {
 </script>
 ```
 
-当然，通常情况下，我们会与 vue-router 一起使用，把 md 文件作为一个视力组件加载到 `router-view` 中去。
+当然，通常情况下，我们会与 vue-router 一起使用，把 md 文件作为一个视图组件加载到 `router-view` 中去。
 
 ```js
 {
