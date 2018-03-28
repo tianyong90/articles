@@ -42,9 +42,9 @@
 
 #### 用成熟好用的测试工具库 -- vue-test-utils
 
-vue-test-utils 也是 Vue 生态圈中的一个开源项目，其前身是 avoriaz，出自同一个作者，avariaz 也是一个不错的包，但其 README 中有说明，当 vue-test-utils 正式发布的时候， avariaz 将会被废弃。
+[vue-test-utils](https://github.com/vuejs/vue-test-utils) 是 Vue 生态圈中的一个开源项目，其前身是 [avoriaz](https://github.com/eddyerburgh/avoriaz)，avoriaz 也是一个不错的包，但其 README 中有说明，当 vue-test-utils 正式发布的时候， 它将会被废弃。
 
-vue-test-utils 极大地简化了 Vue.js 单元测试。
+vue-test-utils 能极大地简化 Vue.js 单元测试。
 
 例如，网上一搜 Vue 单元测试，得到的例子一般是像下面这样的（包括 vue-cli 提供的模板里默认也是这样）：
 
@@ -79,9 +79,7 @@ describe('HelloWorld.vue', () => {
 })
 ```
 
-省事多了！
-
-wrapper 内含许多有用的方法，上面的例子中，有了 find() 用不着 document.querySelector() 了。而这个只是它最简单最基础的用法。vue-test-utils 还有 createLocalVue() 等方法以及 stub 之类的功能，基本上可以完成绝大部分情况下的测试用例。
+可以看到代码更加简洁了。wrapper 内含许多有用的方法，上面的例子中所使用的 find() 其中最简单不过的一个。vue-test-utils 还有 createLocalVue() 等方法以及 stub 之类的功能，基本上可以完成绝大部分情况下的测试用例。
 
 > 需要注意的是，截至日前（2018-03-21）仍然处于 Beta 阶段。在正式版发布之前可能会有大的更改，例如新增或废弃一些方法。同时也可能存在一些 BUG（自己就曾[修复过一个](https://github.com/vuejs/vue-test-utils/issues/263) :smile:）。但目前总体来说已趋于稳定，推荐使用，需要留意其最新更改。
 
@@ -111,7 +109,29 @@ wrapper 内含许多有用的方法，上面的例子中，有了 find() 用不�
 
 CodeCov 能提供这种服务，并可以结合前面提到的 CI 使用，通过 CI 在代码推送后自动执行单元测试，通过后将代码覆盖率相关数据发送给 CodeCov，这样，在 README 中加入的覆盖率徽标就能自动更新了。
 
-// TODO
+为此，你需要一个 codecov 账号（通常用 GitHub 账号登录即可）并安装 `codecov` 包
+
+```shell
+$ yarn add -D codecov
+```
+
+然后在 CI 的任务配置里加入上传代码测试覆盖率数据的步骤，例如 CircleCI 配置如下：
+
+```yaml
+steps:
+    ## 前面部分任务省略
+
+    # run tests!
+    - run: yarn test
+
+    # update codecov stats
+    - run: ./node_modules/.bin/codecov
+```
+
+最后在 README 里加入微标图片就可以了,就像这样。
+
+![code cov](https://img.shields.io/codecov/c/github/tianyong90/we-vue/master.svg)
+
 
 ## Jest 相对于 karma + mocha + Chrome 组合的优缺点
 
@@ -141,8 +161,6 @@ CodeCov 能提供这种服务，并可以结合前面提到的 CI 使用，通�
 
     > Jest 甚至提供了 jest-codemods 这一工具，用来将使用其它包的测试迁移为使用 Jest
 
-6. 官方团队很勤快，Issue 修复速度快，更新也很勤快，而这些升级也带来了不少好用的新功能。
-
 ### 缺点
 
 1. jsdom 的一些局限性
@@ -155,7 +173,7 @@ CodeCov 能提供这种服务，并可以结合前面提到的 CI 使用，通�
 
     例如 vue-jest，目前的版本并不能完全实现 vue-loader 的功能。比如，使用 sass，postcss 之类的功能，它会抛出警告信息。代码中直接 import 实际的 css 文件，则有可能报错，这时则需要使用 mock 来模拟 css 文件。这些问题，在使用 karma-mocha Chrome 的时候是没有的，因为测试运行于真实的浏览器环境中。
 
-## ChromeHeadless VS. PhantomJS
+## ChromeHeadless vs. PhantomJS?
 
 较新版本的 Chrome 支持以 headless 模式运行，这对于测试这种不需要显示界面的任务来说是很合适了（其实也可以使用常规模式，只不过执行测试的时候 Chrome 会弹出窗口）。
 
@@ -164,7 +182,13 @@ CodeCov 能提供这种服务，并可以结合前面提到的 CI 使用，通�
 Chrome headless 对于 PhantomJS 来说算是一个致命的打击，特别是 
 Chrome 官方推出的 puppeteer 在短时间内已经被广泛接受和使用。但其实 PhantomJS 还是有一些适用场景的，例如一些服务器并不支持 Chrome，这种情况下 PhantomJS 就有用武之地了。不过目前看来，对手的碾压以及自身维护团队的涣散，让我有理由放弃它了。
 
-# 后记
+## 后记
+
+实践总是最有效率的学习方式，不停地折腾才能不断的进步，特别是对于编程这事上，每天都有新的东西出现。
+
+编写单元测试可能比较枯燥，因为它并不像做新功能一样让人兴奋。但只要耐心调试，当全部测试用例都通过，当最后测试覆盖率慢慢提升时，那种成就感也不亚于开发出了新功能！
+
+## 广告
 
 最后，为自己的 we-vue 打个小广告，虽然目前不成气候，也还有不少需要完善的地方。但自己会做下去，也希望能有更多的人支持和参与。里面可以看到一些觉的组件测试套路，目前组件部分的单元测试覆盖率已经超过 99%。
 
