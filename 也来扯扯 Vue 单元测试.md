@@ -192,7 +192,7 @@ Chrome 官方推出的 puppeteer 在短时间内已经被广泛接受和使用�
 
 最后，为自己的 we-vue 打个小广告，虽然目前不成气候，也还有不少需要完善的地方。但自己会做下去，也希望能有更多的人支持和参与。里面可以看到一些觉的组件测试套路，目前组件部分的单元测试覆盖率已经超过 99%。
 
-项目地址；[https://github.com/tianyong90/we-vue](https://github.com/tianyong90/we-vue)  
-在线文档；[https://wevue.org](https://wevue.org)  
-在线示例；[https://demo.wevue.org](https://demo.wevue.org)
+项目地址: [https://github.com/tianyong90/we-vue](https://github.com/tianyong90/we-vue)  
+在线文档: [https://wevue.org](https://wevue.org)  
+在线示例: [https://demo.wevue.org](https://demo.wevue.org)
 
