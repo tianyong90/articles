@@ -1,4 +1,4 @@
-# 使用 Eslint 保证代码干净整洁
+# 使用 Eslint 保证代码干净高质
 
 ## 什么是 Eslint
 
@@ -8,7 +8,9 @@
 
 ### 规则配置，.eslintrc.js 或 .eslintrc.json
 
-### 注意语法 eslint-disable
+### .eslintignore
+
+### 注释语法 eslint-disable
 
 ### Editorconfig
 
@@ -27,5 +29,7 @@
 2. 选择适合自身项目和习惯的
 
 3. 并不是越严格越好
+
+$. 结合 prettier 一起使用
 
 如果没有规范的约束，大家一起放飞自我……
