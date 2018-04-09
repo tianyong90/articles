@@ -2,7 +2,7 @@
 
 ## 什么是 Eslint ？为什么用它？
 
-JavaScript 是一种十分灵活的语言，有些地方甚至灵活到没什么规矩。比如，跟不少脚本语言一样，变量可以不“声明”而直接使用/赋值，行尾的分号可有可无，
+JavaScript 是一种十分灵活的脚本语言，有些地方甚至灵活到没什么规矩。比如，跟不少脚本语言一样它是弱类型的，变量可以不“声明”而直接使用/赋值，行尾的分号可有可无，有些大括号可有可无……
 
 这些错误有的可能只是规范性或者说习惯上的错误，并不影响代码的运行，而有的错误则可能程序运行出错。
 
@@ -12,7 +12,17 @@ JavaScript 是一种十分灵活的语言，有些地方甚至灵活到没什么
 
 - 全局
 
+```shell
+$ npm install eslint -g
+```
+
 - 项目内
+
+```shell
+$ npm install eslint --save-dev
+```
+
+> 除了安装 eslint 之处，还需要根据需要安装它的一些插件包，例如：eslint-config-standard, eslint-plugin-promise 等等
 
 ### 规则配置，.eslintrc.js 或 .eslintrc.json
 
