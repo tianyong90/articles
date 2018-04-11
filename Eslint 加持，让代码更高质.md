@@ -22,7 +22,7 @@ $ npm install eslint -g
 $ npm install eslint --save-dev
 ```
 
-> 除了安装 eslint 之处，还需要根据需要安装它的一些插件包，例如：eslint-config-standard, eslint-plugin-promise 等等
+> 除了安装 eslint 之处，还需要根据需要安装它的一些插件包，例如：eslint-config-standard, eslint-plugin-promise, eslint-plugin-vue 等等
 
 ### 规则配置，.eslintrc.js 或 .eslintrc.json
 
@@ -31,6 +31,8 @@ $ npm install eslint --save-dev
 ### 注释语法 eslint-disable
 
 ### Editorconfig
+
+### babelrc
 
 ### 命令行
 
@@ -42,7 +44,7 @@ $ npm install eslint --save-dev
 
 3. Sublime Text, Atom 等其它编辑器也可以找到合适的插件，可根据自身情况选用。
 
-## 规则配置的若干建议
+## 若干建议
 
 1. 使用比较流行的规则
 
