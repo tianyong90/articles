@@ -17,6 +17,8 @@
 
 1. [Eslint 加持，让代码更高质]()
 
+1. [Laravel 中使用 puppeteer 采集动态加载的网页]()
+
 ## 计划中
 
 1. [玩转 laravel-mix]()
