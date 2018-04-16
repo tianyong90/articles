@@ -9,3 +9,4 @@
 但今天这里要介绍的是一个后来居上的工具 -- puppeteer，它是随着 Chrome Headless 技术兴起而快速发展起来的。而且非常关键的是，puppeteer 由 Chrome 的官方团队开发和维护，这是一个极大的优势，毕竟除了他们，可能没人更了解 Chrome 了。
 
 
+安装 spatie/browsershot
