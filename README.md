@@ -9,7 +9,7 @@
 1. [highlight.js 在 Vue 中使用的一点儿经验](https://github.com/tianyong90/articles/blob/master/highlight.js%20%E5%9C%A8%20Vue%20%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84%E4%B8%80%E7%82%B9%E5%84%BF%E7%BB%8F%E9%AA%8C.md)
 1. [也来扯扯 Vue 单元测试](https://github.com/tianyong90/articles/blob/master/%E4%B9%9F%E6%9D%A5%E6%89%AF%E6%89%AF%20Vue%20%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95.md)
 
-1. [Laravel 中使用 puppeteer 采集异步加载的网页](https://github.com/tianyong90/articles/blob/master/Laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20puppeteer%20%E9%87%87%E9%9B%86%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9.md)
+1. [Laravel 中使用 puppeteer 采集异步加载的网页内容](https://github.com/tianyong90/articles/blob/master/Laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20puppeteer%20%E9%87%87%E9%9B%86%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9.md)
 
 ## 未完成
 
