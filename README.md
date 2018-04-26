@@ -19,6 +19,8 @@
 
 1. [Eslint 加持，让代码更高质]()
 
+1. [自己写个 vue markdown loader]()
+
 ## 计划中
 
 1. [玩转 laravel-mix]()
