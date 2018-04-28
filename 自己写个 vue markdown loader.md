@@ -178,6 +178,16 @@ function createContainer (klass, defaultTitle) {
 
 ```
 
-```js
+```html
+<template>
+  <my-markdown/>
+</template>
 
+<script>
+export default {
+  components: {
+    'my-markdown': () => import('./something-cool.ms')
+  }
+}
+</script>
 ```
