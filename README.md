@@ -11,6 +11,8 @@
 
 1. [Laravel 中使用 puppeteer 采集异步加载的网页内容](https://github.com/tianyong90/articles/blob/master/Laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20puppeteer%20%E9%87%87%E9%9B%86%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E7%9A%84%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9.md)
 
+1. [自己撸个 vue markdown loader]()
+
 ## 未完成
 
 1. [Laravel5.5 + laravel-echo + EasyWechat 实现微信扫码登录]()
@@ -18,8 +20,6 @@
 1. [玩转 PHP 单元测试]()
 
 1. [Eslint 加持，让代码更高质]()
-
-1. [自己写个 vue markdown loader]()
 
 ## 计划中
 
