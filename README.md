@@ -13,6 +13,8 @@
 
 1. [自己撸个 vue markdown loader](https://github.com/tianyong90/articles/blob/master/%E8%87%AA%E5%B7%B1%E6%92%B8%E4%B8%AA%20vue%20markdown%20loader.md)
 
+1. [deployer 实战经验分享](https://github.com/tianyong90/articles/blob/master/deployer%20%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB.md)
+
 ## 未完成
 
 1. [Laravel5.5 + laravel-echo + EasyWechat 实现微信扫码登录]()
@@ -25,4 +27,3 @@
 
 1. [玩转 laravel-mix]()
 
-1. [deployer 实战经验分享]()
