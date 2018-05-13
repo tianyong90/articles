@@ -17,7 +17,7 @@
 
 ## 未完成
 
-1. [Laravel5.5 + laravel-echo + EasyWechat 实现微信扫码登录]()
+1. [Laravel + laravel-echo + EasyWechat 实现微信扫码登录]()
 
 1. [玩转 PHP 单元测试]()
 
@@ -26,4 +26,6 @@
 ## 计划中
 
 1. [玩转 laravel-mix]()
+
+1. [使用 CircleCI 进行集成测试、部署]()
 
