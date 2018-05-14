@@ -2,6 +2,8 @@
 
 ## 所谓 CI
 
+Continuous integration
+
 ## 关于 Circle
 
 ## 使用步骤
