@@ -17,8 +17,6 @@
 
 ## 未完成
 
-1. [Laravel + laravel-echo + EasyWechat 实现微信扫码登录]()
-
 1. [玩转 PHP 单元测试]()
 
 1. [Eslint 加持，让代码更高质]()
@@ -28,4 +26,6 @@
 1. [玩转 laravel-mix]()
 
 1. [使用 CircleCI 进行集成测试、部署]()
+
+1. [用 Algolia DocSearch 轻松实现文档全站搜索]()
 
