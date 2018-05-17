@@ -79,10 +79,14 @@ export default {
 </script>
 ```
 
-> **注意：为了救命代码简洁，上述代码仅贴出了直接相关的部分。若有兴趣，可前往 [we-vue](https://github.com/tianyong90/we-vue) 查看实际使用情况**
+> **注意：为了示例代码简洁，上述代码仅贴出了直接相关的部分。若有兴趣，可前往 [we-vue](https://github.com/tianyong90/we-vue) 查看实际使用情况**
+
+最后根据自己的喜好及需要，调整下搜索框及搜索下拉弹出层的样式。就完工了。
+
+![doc_search_example](./images/doc_search_letter.jpg)
 
 ## 总结
 
-Algolia DocSearch 可以说真如其官网描述的那样，算是目前构建可在线搜索文档的最简单的方式之一了。你只需要关注文档本身，进行少量的配置之后，其它的 Algolia 全包了。另外，Algolia 还有其它软件作品，也非常优秀，诸位可前往官网自行探索。
+Algolia DocSearch 可以说真如其官网描述的那样，算是目前构建可在线搜索文档的最简单的方式之一了。你只需要关注文档本身，进行少量的配置之后，其它的 Algolia 全包了。另外，Algolia 还有一些其它优秀产品及服务，诸位可前往官网自行探索。
 
 本文以自己的项目为例，但 Aloglia DocSearch 适合很多类型的网站，使用 [Vue.js 官网](https://vuejs.org)这类用 HEXO 构建的静态站，又或者像 [Easywechat](https://easywechat.com) 一样用 Laravel 开发的动态网站（事实上自己早前曾向超哥安利过 DocSearch, 然后竟然真被用上了 :smile: ）。有了搜索功能之后，用户能更方便有找到自己想要的信息，当然，网站的格调也极大的提升了！
