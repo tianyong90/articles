@@ -15,6 +15,8 @@
 
 1. [deployer 实战经验分享](https://github.com/tianyong90/articles/blob/master/deployer%20%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB.md)
 
+1. [用 Algolia DocSearch 轻松实现文档全站搜索](https://github.com/tianyong90/articles/blob/master/%E7%94%A8%20Algolia%20DocSearch%20%E8%BD%BB%E6%9D%BE%E5%AE%9E%E7%8E%B0%E6%96%87%E6%A1%A3%E5%85%A8%E7%AB%99%E6%90%9C%E7%B4%A2.md)
+
 ## 未完成
 
 1. [玩转 PHP 单元测试]()
@@ -26,6 +28,4 @@
 1. [玩转 laravel-mix]()
 
 1. [使用 CircleCI 进行集成测试、部署]()
-
-1. [用 Algolia DocSearch 轻松实现文档全站搜索]()
 
