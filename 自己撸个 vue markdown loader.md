@@ -231,7 +231,9 @@ export default {
 
 可以看到，写个 loader 其实也是蛮简单的，了解其中原理之后，你甚至可以创建自创格式的文件和扩展名，然后写个 loader 处理/加载这类文件，是不是很骚？！:smile:
 
-正如开头提到的，loader 中的代码，借鉴自 vuepress,感谢其开发组人员并尊重其版权，如果大家有兴趣可自己前往查看该项目，本人也并不打算装这个 loader 封装成包并发布，它仅仅是为了自己项目需要折腾的，十分粗陋。
+正如开头提到的，loader 中的代码，借鉴自 vuepress,感谢其开发组人员并尊重其版权，如果大家有兴趣可自己前往查看该项目，~~本人也并不打算装这个 loader 封装成包并发布，它仅仅是为了自己项目需要折腾的，十分粗陋~~。现在这个 loader 已经发布到 npm，有需要的同学可以自行安装。
+
+[@tianyong90/vue-markdown-loader](https://www.npmjs.com/package/@tianyong90/vue-markdown-loader)
 
 最后，放出自己用到这个 `loader` 的项目地址，算是广告一波。:smile:
 
