@@ -1,16 +1,14 @@
-# Laravel5.5 + laravel-echo + EasyWechat 实现微信扫码登录
+# Laravel + laravel-echo + EasyWechat 实现微信扫码登录
 
-微信扫码登录作为一种第三方登录方式，
-
-对于接入微信开放平台的公众号应用来说，实现扫码登录是相当容易的。不过本文所要讨论的是另一种情况，有时候我们不需要、不想或者不能接入开放平台，但又想进行微信扫码登录。
-
-这是可以实现的。
+对于接入微信开放平台的公众号应用来说，实现扫码登录是相当容易的，有 EasyWechat SDK 加持，再按着官方的文档一把梭，很快就能完成。
+不过本文所要讨论的是另一种情况，有时候出于某些原因，自己的公众号不能接入开放平台，但又想进行微信扫码登录，这种情况下显示就不能再换官方的套路来了。但只要我们稍作变通，就能实现这一需求。
 
 ## 基本思路：
 
-1. 登录页显示微信二维码（使用 EasyWechat SDK 创建，短时效的临时二维码就够了）。
-2. 用户扫码后推送消息到服务器接口，接口中根据业务情况进行判断处理，符合条件时触发 WechatScanLogin 事件。
-3. WechatScanLogin 事件实现了 ShouldBroadcast 接口，当他
+1. 登录页显示微信二维码（使用 EasyWechat SDK 创建，短时效的临时二维码）
+2. 用户扫码后推送消息到服务器接口，接口中根据业务情况进行判断处理，符合条件时触发 WechatScanLogin 事件
+3. WechatScanLogin 事件实现 ShouldBroadcast 接口，所以当它被触发时也会向指定的频道进行广播
+4. 前端 laravel-echo 监听频道中用户扫码登录的消息并进行处理
 
 ## 具体实现
 
@@ -33,24 +31,20 @@ php artisan make:event WechatScanLogin
 WechatScanLogin 逻辑如下
 
 ```php
-class WechatLogin implements ShouldBroadcast
+class WechatScanLogin implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public $token;
 
-    public $channel;
-
     /**
      * Create a new event instance.
      *
      * @param $token
-     * @param $channel
      */
-    public function __construct($token, $channel)
+    public function __construct($token)
     {
         $this->token = $token;
-        $this->channel = $channel;
     }
 
     /**
@@ -60,10 +54,12 @@ class WechatLogin implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel($this->channel);
+        return new Channel(‘scan-login’);
     }
 }
 ```
+
+上面最关键的就是事件要实现 ShouldBroadcast 接口并在 broadcastOn 方法中指定要广播的频道。WechatScanLogin 的公开属性 token 会自动包含在广播数据中。
 
 3. 
 
@@ -83,7 +79,7 @@ public function serve()
             $user = User::where('openid', $message['FromUserName'])->first();
 
             if ($user && User::hasRole('admin')) {
-                event(new WechatLogin('token', 'mychannel'));
+                event(new WechatScanLogin('token'));
 
                 return '登录成功';
             } else {
@@ -117,7 +113,4 @@ echo.channel('scanlogin').listen('WechatScanLogin', (e) => {
 
 ## 总结
 
-可见，即使公众号没有接入微信开放平台，也是可以实现微信扫码登录的。
-
-同样的原理也可以用于一些第三方支付场景，例如微信扫码支付，当应用收到支付架设确认支付完成后，让前端知道已经完成，而前端订阅相关频道事件，接收到事件后进行一些处理（通常是一些提示和跳转）。
 
